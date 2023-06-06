@@ -22,8 +22,13 @@ namespace RentACar.Models
         }
     
         public int CustomerId { get; set; }
+
+        [Required(ErrorMessage = "Name is Required")]
         public string Name { get; set; }
-        [Display(Name = "Driver License Number")]
+
+
+        [Display(Name = "License Number")]
+        [Required(ErrorMessage = "License Number is Required")]
         public string DriverLicNo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

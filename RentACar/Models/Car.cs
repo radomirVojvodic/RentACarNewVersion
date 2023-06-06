@@ -11,7 +11,9 @@ namespace RentACar.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
+    using System.Data.Entity;
 
     public partial class Car
     {
@@ -22,17 +24,22 @@ namespace RentACar.Models
         }
     
         public int CarId { get; set; }
+
+        [Required(ErrorMessage = "Manufacturer is Required")]
         public string Manufacturer { get; set; }
+
+        [Required(ErrorMessage = "Model is Required")]
         public string Model { get; set; }
 
         [Display(Name = "License Plate")]
 
+        [Required(ErrorMessage = "License Plate is Required")]
         public string LicensePlate { get; set; }
         public Nullable<int> Year { get; set; }
-        
-        [RegularExpression("[YN]")]
-        public string Available { get; set; }
-        
+
+        [DefaultValue(true)]
+        [Required(ErrorMessage = "Available is Required")]
+        public Nullable<bool> Available { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rental> Rentals { get; set; }

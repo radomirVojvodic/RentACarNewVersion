@@ -1,0 +1,685 @@
+{
+	"info": {
+		"_postman_id": "5bd78ae1-58dc-43e1-aeca-e94af90dc7e2",
+		"name": "Rent A Car RadomirV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11652283"
+	},
+	"item": [
+		{
+			"name": "Get All Cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51915/api/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Car",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51915/api/cars/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"cars",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CarDTO Get car",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51915/api/cars/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"cars",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Car",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CarId\": 8,\r\n    \"Manufacturer\": \"Honda\",\r\n    \"Model\": \"Acord\",\r\n    \"LicensePlate\": \"NS150PZ\",\r\n    \"Year\": 2021,\r\n    \"Available\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51915/api/cars/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"cars",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CarDTO update car",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"CarId\": 12,\r\n        \"Manufacturer\": \"Suzuki\",\r\n        \"Model\": \"sizio\",\r\n        \"LicensePlate\": \"NS1550PZ\",\r\n        \"Year\": 2021,\r\n        \"Available\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51915/api/cars/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"cars",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete car",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51915/api/cars/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"cars",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CarDTO Add new car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n    \"Manufacturer\": \"Suzuki\",\r\n    \"Model\": \"sizo\",\r\n    \"LicensePlate\": \"NS1550PZ\",\r\n    \"Year\": 2021,\r\n    \"Available\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51915/api/cars/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"cars",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"Rentals\": [],\r\n        \"Manufacturer\": \"KIA\",\r\n        \"Model\": \"Sportage\",\r\n        \"LicensePlate\": \"NS140PZ\",\r\n        \"Year\": 2021,\r\n        \"Available\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51915/api/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Car 201 status code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"Rentals\": [],\r\n        \"Manufacturer\": \"Seat\",\r\n        \"Model\": \"Ibiza\",\r\n        \"LicensePlate\": \"NS190FZ\",\r\n        \"Year\": 2021,\r\n        \"Available\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51915/api/cars/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"cars",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51915/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerDTO get customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51915/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51915/api/customers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustometDTO get customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51915/api/customers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"Name\": \"Elaela\",\r\n        \"DriverLicNo\": \"746952\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51915/api/customers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer DTO update customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"Name\": \"Elaelaa\",\r\n        \"DriverLicNo\": \"746952\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51915/api/customers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51915/api/customers/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"customers",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Rentals\": [],\r\n    \"CustomerId\": 100,\r\n    \"Name\": \"Ela\",\r\n    \"DriverLicNo\": \"746952\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51915/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add customer 201 status code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Rentals\": [],\r\n    \"CustomerId\": 12,\r\n    \"Name\": \"Milos\",\r\n    \"DriverLicNo\": \"745652\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51915/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Rentals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51915/api/rentals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"rentals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RentalsDTO get all Rentals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51915/api/rentals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"rentals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Rental",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51915/api/rentals/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"rentals",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RentalDTO get rental",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51915/api/rentals/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"rentals",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update rental",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"CustomerId\": 3,\r\n        \"CarId\": 9,\r\n        \"DateRented\": \"2023-05-19T00:00:00\",\r\n        \"DateReturned\": \"2023-05-31T00:00:00\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51915/api/rentals/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"rentals",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RentalsDTO update rental",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n        \"RentalId\": 10,\r\n        \"CustomerId\": 4,\r\n        \"CarId\": 9,\r\n        \"DateRented\": \"2023-09-09T00:00:00\",\r\n        \"DateReturned\": \"2023-05-08T00:00:00\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51915/api/rentals/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"rentals",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RentalDTO Add new rental",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \r\n        \"CustomerId\": 6,\r\n        \"CarId\": 1,\r\n        \"DateRented\": \"2023-09-09T00:00:00\",\r\n        \"DateReturned\": \"2023-05-08T00:00:00\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51915/api/rentals/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"rentals",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new rental",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \r\n    \"CustomerId\": 1,\r\n    \"CarId\": 1,\r\n    \"DateRented\": \"2023-05-19T00:00:00\",\r\n    \"DateReturned\": \"2023-05-31T00:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51915/api/rentals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"rentals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Rental",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51915/api/rentals/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51915",
+					"path": [
+						"api",
+						"rentals",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

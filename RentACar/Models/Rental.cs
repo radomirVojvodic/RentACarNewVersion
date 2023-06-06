@@ -16,12 +16,22 @@ namespace RentACar.Models
     public partial class Rental
     {
         public int RentalId { get; set; }
+
+        [Required(ErrorMessage = "Customer is Required")]
         public Nullable<int> CustomerId { get; set; }
-        [Display(Name = "Car")]
+
+
+        [Required(ErrorMessage = "Car is Required")]
         public Nullable<int> CarId { get; set; }
+
         [Display(Name = "Date Rented")]
+        [DisplayFormat(DataFormatString = "{0:MM.dd.yyyy}", ApplyFormatInEditMode = true)]
+        [Required(ErrorMessage = "Date Rented is Required")]
         public Nullable<System.DateTime> DateRented { get; set; }
+
         [Display(Name = "Date Returned")]
+        [DisplayFormat(DataFormatString = "{0:MM.dd.yyyy}", ApplyFormatInEditMode = true)]
+
         public Nullable<System.DateTime> DateReturned { get; set; }
     
         public virtual Car Car { get; set; }

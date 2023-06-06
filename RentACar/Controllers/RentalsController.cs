@@ -44,7 +44,7 @@ namespace RentACar.Controllers
        
         public ActionResult Create()
         {
-            ViewBag.CarId = new SelectList(db.Cars.Where(c => c.Available == "Y"), "CarId", "Manufacturer");
+            ViewBag.CarId = new SelectList(db.Cars.Where(c => c.Available == true), "CarId", "Manufacturer");
             ViewBag.CustomerId = new SelectList(db.Customers, "CustomerId", "Name");
             return View();
         }
@@ -57,7 +57,7 @@ namespace RentACar.Controllers
         public ActionResult Create([Bind(Include = "RentalId,CustomerId,CarId,DateRented,DateReturned")] Rental rental)
         {
             var car = db.Cars.Find(rental.CarId);
-            if (car == null || car.Available != "Y")
+            if (car == null || car.Available != true)
             {
                 ModelState.AddModelError("CarId", "The selected car is not available for rental.");
             }
@@ -69,7 +69,7 @@ namespace RentACar.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CarId = new SelectList(db.Cars.Where(c => c.Available == "Y"), "CarId", "Manufacturer", rental.CarId);
+            ViewBag.CarId = new SelectList(db.Cars.Where(c => c.Available == true), "CarId", "Manufacturer", rental.CarId);
             ViewBag.CustomerId = new SelectList(db.Customers, "CustomerId", "Name", rental.CustomerId);
             return View(rental);
         }
